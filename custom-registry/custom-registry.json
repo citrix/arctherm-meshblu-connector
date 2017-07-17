@@ -9,7 +9,7 @@
       "description": "The description for the ARC BT Thermometer",
       "type": "device:thermometer",
       "tags": ["Healthcare"],
-      "githubSlug": "IoTdo/meshblu-connector-arc-thermometer",
+      "githubSlug": "citrix/arctherm-meshblu-connector",
       "createUri": "https://connector-factory.octoblu.com/connectors/create/iotdo/meshblu-connector-arc-thermometer",
       "configureUri": "https://connector-factory.octoblu.com/connectors/configure/:uuid"
     }
