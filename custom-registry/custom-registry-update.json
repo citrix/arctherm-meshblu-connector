@@ -1,5 +1,5 @@
 {
     "$set": {
-        "octoblu.registries.connectors.my-custom-registry.uri": "https://raw.githubusercontent.com/IoTdo/meshblu-connector-arc-thermometer/master/custom-registry/custom-registry.json"
+        "octoblu.registries.connectors.my-custom-registry.uri": "https://raw.githubusercontent.com/citrix/arctherm-meshblu-connector/master/custom-registry/custom-registry.json"
     }
 }
