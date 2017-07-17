@@ -38,15 +38,10 @@ Next, we need to install the latest version of Node.js:
 curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
+And we need a couple g++:
 
-(`meshblu-connector-runner` requires Node.js version 5.5 - we're providing these instructions as well)
 ```bash
-wget https://nodejs.org/download/release/v5.5.0/node-v5.5.0-linux-armv7l.tar.gz
-tar zxvf node-v5.5.0-linux-armv7l.tar.gz
-cd node-v5.5.0-linux-armv7l
-sudo cp -R * /usr/local/
-sudo chmod +x /usr/local/bin/node
-sudo chmod +x /usr/local/bin/npm
+sudo apt-get install g++
 ```
 
 We also need a couple of Bluetooth helper libraries:
@@ -67,7 +62,7 @@ npm install
 
 ## Initial configuration
 
-Create a meshblu.json config file and add the following code. Account UUID and TOKEN you get by visiting http://octoblu.com, logging in and clicking on profile icon in the upper right of the screen.
+Create a meshblu.json config file in the arctherm-meshblu-connector directory and add the following code. Account UUID and TOKEN you get by visiting http://octoblu.com, logging in and clicking on profile icon in the upper right of the screen.
 
 ```bash
 {
@@ -106,6 +101,14 @@ We need to modify the meshblu.json config file to match the registered THING in 
 Restart the connector: 
 
 ```bash
+sudo npm start
+```
+## Auto-start the connector
+
+If you want to autostart the connector create this file and have the envirnment run it on start up:
+
+```bash
+cd ~/arctherm-meshblu-connector
 sudo npm start
 ```
 
