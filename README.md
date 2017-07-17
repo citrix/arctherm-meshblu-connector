@@ -1,11 +1,9 @@
 # meshblu-connector-arc-thermometer
 
-[![Dependency status](http://img.shields.io/david/IoTdo/meshblu-connector-arc-thermometer.svg?style=flat)](https://david-dm.org/IoTdo/meshblu-connector-arc-thermometer)
-[![devDependency Status](http://img.shields.io/david/dev/IoTdo/meshblu-connector-arc-thermometer.svg?style=flat)](https://david-dm.org/IoTdo/meshblu-connector-arc-thermometer#info=devDependencies)
-[![Build Status](http://img.shields.io/travis/IoTdo/meshblu-connector-arc-thermometer.svg?style=flat&branch=master)](https://travis-ci.org/IoTdo/meshblu-connector-arc-thermometer)
-[![Slack Status](http://community-slack.octoblu.com/badge.svg)](http://community-slack.octoblu.com)
+## _**Note: This is a demo connector only and not intended for use commercial use. This connector is incompatable with production versions of the ARC Thermometers.**_
+---
 
-#ARC Temp Connector on Raspberry Pi
+# ARC Temp Connector on Raspberry Pi
 
 ## Install Raspbian on your RPi 3
 
