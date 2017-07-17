@@ -2,16 +2,16 @@
   "name": "meshblu-connector-arc-thermometer",
   "version": "1.0.0",
   "description": "Meshblu Connector for the ARC Thermometer",
-  "homepage": "https://github.com/IoTdo/meshblu-connector-arc-thermometer",
-  "bugs": "https://github.com/IoTdo/meshblu-connector-arc-thermometer/issues",
+  "homepage": "https://github.com/citrix/arctherm-meshblu-connector",
+  "bugs": "https://github.com/citrix/arctherm-meshblu-connector/issues",
   "author": {
     "name": "IoT - Internet of Things",
-    "url": "https://github.com/IoTdo"
+    "url": "https://github.com/Citrix"
   },
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/IoTdo/meshblu-connector-arc-thermometer.git"
+    "url": "https://github.com/citrix/arctherm-meshblu-connector.git"
   },
   "scripts": {
     "start": "meshblu-connector-runner",
@@ -39,7 +39,7 @@
     "async": "^2.0.1"
   },
   "meshbluConnector": {
-    "githubSlug": "IoTdo/meshblu-connector-arc-thermometer"
+    "githubSlug": "citrix/arctherm-meshblu-connector"
   },
   "platformDependencies": {
     "darwin": [ ],
