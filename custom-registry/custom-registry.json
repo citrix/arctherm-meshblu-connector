@@ -1,0 +1,17 @@
+{
+  "name": "My Custom Registry",
+  "documentation": "https://meshblu-connectors.readme.io",
+  "version": "1.0.0",
+  "items": [
+    {
+      "_id": "meshblu-connector-arc-thermometer",
+      "name": "ARC BT Thermometer",
+      "description": "The description for the ARC BT Thermometer",
+      "type": "device:thermometer",
+      "tags": ["Healthcare"],
+      "githubSlug": "IoTdo/meshblu-connector-arc-thermometer",
+      "createUri": "https://connector-factory.octoblu.com/connectors/create/iotdo/meshblu-connector-arc-thermometer",
+      "configureUri": "https://connector-factory.octoblu.com/connectors/configure/:uuid"
+    }
+  ]
+}
