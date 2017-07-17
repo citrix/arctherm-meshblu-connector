@@ -60,8 +60,8 @@ sudo apt-get install bluetooth bluez libbluetooth-dev libudev-dev
 Let's install the connector! Get the source code from GitHub and install it:
 
 ```bash
-git clone https://github.com/IoTdo/meshblu-connector-arc-thermometer
-cd meshblu-connector-arc-thermometer
+git clone https://github.com/citrix/arctherm-meshblu-connector
+cd arctherm-meshblu-connector
 npm install
 ```
 
