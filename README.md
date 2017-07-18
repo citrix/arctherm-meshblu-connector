@@ -38,7 +38,7 @@ Next, we need to install the latest version of Node.js:
 curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
-And we need a couple g++:
+And we need to install g++:
 
 ```bash
 sudo apt-get install g++
@@ -108,8 +108,21 @@ sudo npm start
 If you want to autostart the connector create this file and have the envirnment run it on start up:
 
 ```bash
+#!/bin/bash
 cd ~/arctherm-meshblu-connector
 sudo npm start
+```
+
+## Set a specific ARC device
+
+If you want to set a specific ARC thermometer which the connector searches for, modify the
+```bash
+ DEVICE_STARTING_NAME = /ARC\:/i
+```
+regular expression to include the 4 number identifier of your ARC device as follows:
+
+```bash
+ DEVICE_STARTING_NAME = /ARC\:0057/i
 ```
 
 ## Debug
