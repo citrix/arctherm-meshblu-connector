@@ -1,10 +1,10 @@
 {EventEmitter}      = require 'events'
-debug               = require('debug')('meshblu-connector-arc-thermometer:index')
-ArcThermometerManager = require './arc-thermometer-md-manager'
+debug               = require('debug')('meshblu-connector-arc-instatemp:index')
+ArcInstaTempManager = require './arc-instatemp-md-manager'
 
 class Connector extends EventEmitter
   constructor: ->
-    @arcTemperature = new ArcThermometerManager
+    @arcTemperature = new ArcInstaTempManager
     @arcTemperature.on 'data', @_onData
 
   isOnline: (callback) =>

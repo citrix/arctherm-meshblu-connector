@@ -1,47 +1,39 @@
-# meshblu-connector-arc-thermometer
+# meshblu-connector-arc-instatemp
 
-## _**Note: This is a demo connector only and not intended for use commercial use. This connector is incompatable with production versions of the ARC Thermometers.**_
----
+#[![Dependency status](http://img.shields.io/david/octoblu/meshblu-connector-ble-heartrate.svg?style=flat)](https://david-dm.org/octoblu/meshblu-connector-ble-heartrate)
+#[![devDependency Status](http://img.shields.io/david/dev/octoblu/meshblu-connector-ble-heartrate.svg?style=flat)](https://david-dm.org/octoblu/meshblu-connector-ble-heartrate#info=devDependencies)
+#[![Build Status](http://img.shields.io/travis/octoblu/meshblu-connector-ble-heartrate.svg?style=flat&branch=master)](https://travis-ci.org/octoblu/meshblu-connector-ble-heartrate)
+[![Slack Status](http://community-slack.octoblu.com/badge.svg)](http://community-slack.octoblu.com)
 
-# ARC Temp Connector on Raspberry Pi
+#ARC Temp Connector on Raspberry Pi
 
 ## Install Raspbian on your RPi 3
 
-Browse over to the Noobs download section, and download it:
+Browse over to the Noobs download section, and download it.
 https://www.raspberrypi.org/downloads/noobs/
 
 - Unarchive the Zip file.
 - Format your SD card.
 - Copy the files onto your SD card
 
-Power on the Raspberry Pi with the SD card inserted and follow the on-screen instructions to install Raspbian.
+Power on the Raspberry Pi with the SD card inserted and follow the on-screen insctructions to install Raspbian.
 
 ## Update libraries
 
 Some libraries need to be removed prior to installing the newer version.
-Login to your RPi and run the following command in terminal:
+Login to your RPi and run the following commands in terminal:
 
 ```bash
 sudo apt-get -y remove nodejs*
-```
-
-Other libraries need to be updated to the latest version:
-
-```bash
 sudo apt-get update
 sudo apt-get -y dist-upgrade
 ```
 
-Next, we need to install the latest version of Node.js:
+Next, we install the latest version of NodeJS:
 
 ```bash
-curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
 sudo apt-get install -y nodejs
-```
-And we need to install g++:
-
-```bash
-sudo apt-get install g++
 ```
 
 We also need a couple of Bluetooth helper libraries:
@@ -52,17 +44,15 @@ sudo apt-get install bluetooth bluez libbluetooth-dev libudev-dev
 
 ## Install connector
 
-Let's install the connector! Get the source code from GitHub and install it:
+Let's install the connector! Get ARC Temp from GitHub and install it:
 
 ```bash
-git clone https://github.com/citrix/arctherm-meshblu-connector
-cd arctherm-meshblu-connector
+git clone https://github.com/IoTdo/meshblu-connector-arc-instatemp
+cd meshblu-connector-arc-instatemp
 npm install
 ```
 
-## Initial configuration
-
-Create a meshblu.json config file in the arctherm-meshblu-connector directory and add the following code. Account UUID and TOKEN you get by visiting http://octoblu.com, logging in and clicking on profile icon in the upper right of the screen.
+Create a meshblu.json config file and add the following code. Account UUID and TOKEN you get by visiting http://octoblu.com, logging in and clicking on profile icon in the upper right of the screen.
 
 ```bash
 {
@@ -86,7 +76,7 @@ Now you should be able to see the connector available in the Octoblu platform un
 
 On your Raspberry Pi, stop the connector (press CTRL + C).
 
-We need to modify the meshblu.json config file to match the registered THING in the Octoblu platform:
+We need to modify the meshblu.config config file to match the registered THING in the Octoblu platform:
 
 ```bash
 {
@@ -103,32 +93,11 @@ Restart the connector:
 ```bash
 sudo npm start
 ```
-## Auto-start the connector
-
-If you want to autostart the connector create this file and have the envirnment run it on start up:
-
-```bash
-#!/bin/bash
-cd ~/arctherm-meshblu-connector
-sudo npm start
-```
-
-## Set a specific ARC device
-
-If you want to set a specific ARC thermometer which the connector searches for, modify the
-```bash
- DEVICE_STARTING_NAME = /ARC\:/i
-```
-regular expression to include the 4 number identifier of your ARC device as follows:
-
-```bash
- DEVICE_STARTING_NAME = /ARC\:0057/i
-```
 
 ## Debug
 
 If you need to debug:
 
 ```bash
-sudo env DEBUG='meshblu-connector-arc-thermometer*' npm start
+sudo env DEBUG='meshblu-connector-arc-instatemp*' npm start
 ```

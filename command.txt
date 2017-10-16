@@ -1,0 +1,1 @@
+ps -ef | grep /home/pi/meshblu-connector-arc-instatemp/node_modules/.bin/meshblu-connector-runner | grep -v grep | awk '{print $2}' | xargs sudo kill

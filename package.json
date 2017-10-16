@@ -1,17 +1,17 @@
 {
-  "name": "meshblu-connector-arc-thermometer",
+  "name": "meshblu-connector-arc-instatemp",
   "version": "1.0.0",
-  "description": "Meshblu Connector for the ARC Thermometer",
-  "homepage": "https://github.com/citrix/arctherm-meshblu-connector",
-  "bugs": "https://github.com/citrix/arctherm-meshblu-connector/issues",
+  "description": "Meshblu Connector for ARC InstaTemp MD",
+  "homepage": "https://github.com/IoTdo/meshblu-connector-arc-instatemp",
+  "bugs": "https://github.com/IoTdo/meshblu-connector-arc-instatemp/issues",
   "author": {
-    "name": "IoT - Internet of Things",
-    "url": "https://github.com/Citrix"
+    "name": "Max Lumnar - IOT Corp.",
+    "url": "https://github.com/maxlumnar"
   },
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/citrix/arctherm-meshblu-connector.git"
+    "url": "https://github.com/IoTdo/meshblu-connector-arc-instatemp.git"
   },
   "scripts": {
     "start": "meshblu-connector-runner",
@@ -22,24 +22,24 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "coffee-coverage": "^1.0.1",
-    "mocha": "^3.1.0",
+    "mocha": "^2.4.5",
     "segfault-handler": "^1.0.0",
-    "sinon": "^1.17.6",
+    "sinon": "^1.17.3",
     "sinon-chai": "^2.8.0"
   },
   "dependencies": {
     "coffee-script": "^1.10.0",
     "debug": "^2.2.0",
     "fs-cson": "^0.3.2",
-    "meshblu-config": "^6.0.0",
-    "meshblu-connector-runner": "^9.1.0",
+    "meshblu-config": "^4.0.0",
+    "meshblu-connector-runner": "^8.0.0",
     "meshblu-connector-schema-generator": "^2.0.0",
     "noble": "^1.6.0",
     "lodash": "^4.15.0",
     "async": "^2.0.1"
   },
   "meshbluConnector": {
-    "githubSlug": "citrix/arctherm-meshblu-connector"
+    "githubSlug": "IoTdo/meshblu-connector-arc-instatemp"
   },
   "platformDependencies": {
     "darwin": [ ],

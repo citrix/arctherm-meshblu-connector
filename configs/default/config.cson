@@ -7,7 +7,7 @@ properties:
     properties:
       autoDiscover:
         title: "Auto Discover"
-        description: "Automatically discover an ARC Thermometer"
+        description: "Automatically discover a ARC InstaTemp MD"
         type: "boolean"
         default: true
       localName:
