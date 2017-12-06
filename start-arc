@@ -1,0 +1,8 @@
+#!/bin/bash
+
+cd ~/arctherm-meshblu-connector
+
+{
+sleep 10
+sudo node start-thermometer.js
+}
